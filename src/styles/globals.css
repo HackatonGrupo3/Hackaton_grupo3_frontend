@@ -1,6 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   * {
@@ -8,14 +12,21 @@
   }
   
   body {
-    @apply bg-white text-gray-900 font-body;
+    @apply text-text-primary;
+    font-family: 'Inter', sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+    @apply bg-background-light;
   }
   
   html {
     scroll-behavior: smooth;
   }
-  
+
+  h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fredoka One', sans-serif;
+  @apply text-primary; /* Aplica el color primario por defecto a los títulos */
+}
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     @apply w-2;
@@ -26,11 +37,11 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-primary-400 rounded-full;
+    @apply bg-primary-light rounded-full;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary-500;
+    @apply bg-primary;
   }
 }
 

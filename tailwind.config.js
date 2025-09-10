@@ -1,85 +1,35 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
+        // Colores principales
         primary: {
-          50: '#fef7ee',
-          100: '#fdedd3',
-          200: '#fbd7a5',
-          300: '#f8bb6d',
-          400: '#f59533',
-          500: '#f27c0a',
-          600: '#e35f00',
-          700: '#bc4502',
-          800: '#953608',
-          900: '#782e0a',
+          light: '#FFB74D', // Naranja más claro
+          DEFAULT: '#FF9800',   // Naranja vibrante
+          dark: '#F57C00',  // Naranja más oscuro
         },
-        secondary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-        },
-        accent: {
-          50: '#fdf4ff',
-          100: '#fae8ff',
-          200: '#f5d0fe',
-          300: '#f0abfc',
-          400: '#e879f9',
-          500: '#d946ef',
-          600: '#c026d3',
-          700: '#a21caf',
-          800: '#86198f',
-          900: '#701a75',
-        },
+        secondary: '#4FC3F7', // Azul cielo
+
+        // Colores de acento
+        accent: '#9C27B0',      // Morado mágico
+        success: '#8BC34A',     // Verde claro
+
+        // Colores neutros
+        'background-light': '#F5F5F5',
+        'text-primary': '#333333',
+        'text-secondary': '#757575',
+        'dark-background': '#1F2937',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Fredoka One', 'cursive'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
-      },
-      animation: {
-        'bounce-slow': 'bounce 2s infinite',
-        'pulse-slow': 'pulse 3s infinite',
-        'wiggle': 'wiggle 1s ease-in-out infinite',
-        'coin-spin': 'coin-spin 2s linear infinite',
-        'fade-in': 'fade-in 0.5s ease-in-out',
-        'slide-up': 'slide-up 0.3s ease-out',
-      },
-      keyframes: {
-        wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
-        },
-        'coin-spin': {
-          '0%': { transform: 'rotateY(0deg)' },
-          '100%': { transform: 'rotateY(360deg)' },
-        },
-        'fade-in': {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        'slide-up': {
-          '0%': { transform: 'translateY(100%)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-      },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        display: ['Fredoka One', 'sans-serif'], // Fuente para títulos y elementos destacados
+        body: ['Inter', 'sans-serif'],         // Fuente para texto general
       },
     },
   },
   plugins: [],
-}
+};
